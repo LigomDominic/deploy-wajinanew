@@ -1,0 +1,30 @@
+# Environment Variables for Render Deployment
+# Copy these to your Render dashboard Environment Variables section
+
+# Required
+SECRET_KEY=your-secret-key-here-change-in-production
+FLASK_ENV=production
+
+# Database (automatically set by Render when you link a PostgreSQL database)
+DATABASE_URL=automatically-set-by-render
+
+# Email Configuration (Optional)
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USE_TLS=true
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_DEFAULT_SENDER=your-email@gmail.com
+
+# Flutterwave Payment Gateway (Optional)
+FLUTTERWAVE_PUBLIC_KEY=your-public-key
+FLUTTERWAVE_SECRET_KEY=your-secret-key
+FLUTTERWAVE_ENCRYPTION_KEY=your-encryption-key
+FLUTTERWAVE_ENVIRONMENT=sandbox
+
+# Notes:
+# - SECRET_KEY: Generate a random key using: python -c "import secrets; print(secrets.token_hex(32))"
+# - DATABASE_URL: Automatically set when you link a PostgreSQL database in Render
+# - MAIL_PASSWORD: For Gmail, use an App Password (not your regular password)
+# - All other variables are optional and can be configured later
+
